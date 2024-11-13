@@ -7,14 +7,15 @@
 def square_list(nums):
     """
 
-    Modifying the input list b replace each element with its square.
+    Modifying the input list but replace each element with its square.
 
     Parameters:
     nums (list): A list of numbers to be squared. The list is mutated in place.
 
     This function does not return a new list, but it specifically mutates the original list.
     """
-    nums[:] = [x * x for x in nums]
+    for index in range(len(nums)):
+        nums[index] *= nums[index]
 
 nums = [7, -3, 12, 9]
 square_list(nums)
